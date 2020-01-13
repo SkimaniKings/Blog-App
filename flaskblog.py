@@ -8,7 +8,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
 class User(db.Model):
-    id = db.column(db.integer, primary_key=True)
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(20) unique=True, nullable=False)
 
 posts = [
     {
