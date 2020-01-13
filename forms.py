@@ -1,5 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import stringField
-
+from wtforms import StringField
+from wtforms.validators import DataRequired
 class RegistrationForm(FlaskForm):
+    username = StringField('username' validators=[])
     
