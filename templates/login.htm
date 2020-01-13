@@ -32,15 +32,20 @@
                         {% else %}
                         {{ form.password.label(class="form-control-label") }}
                         {% endif %}
+                        <div class="form-check">
+                            {{form.remember(class="form-check-input")}}
+                            {{form.remember.label(class="form-check-label")}}
+                        </div>
 
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
+        
     </form>
     <div class="border-top pt-3">
         <small class="text-muted">
-            Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+             Create an Account? <a class="ml-2" href="{{ url_for('register') }}">Sign In</a>
         </small>
     </div>
     {% endblock content %}
