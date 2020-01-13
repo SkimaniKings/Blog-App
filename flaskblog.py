@@ -7,6 +7,9 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 
 db = SQLAlchemy(app)
 
+class User(db.Model):
+    id = db.column(db.integer, primary_key=True)
+
 posts = [
     {
         'author': ' Simon Kimani',
