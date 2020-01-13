@@ -1,5 +1,5 @@
-from flask import Flask, render_template,url_for
-from forms import RegistrationForm,LogininForm
+from flask import Flask, render_template,url_for,flash
+from forms import RegistrationForm,LoginForm
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '6f537a0de4d614ba210441a2049f30d0'
 
@@ -26,14 +26,16 @@ def home():
 @app.route('/about')
 def about():
     return render_template('about.htm')
-@app.route('/Register')
-def Register():
+@app.route('/register', methods= ['GET','POST'])
+def register():
     form = RegistrationForm()
+    if form.validate_on_submit():
+        flash(f'You have successfully created an account for {form.username.data}!')
     return render_template('register.htm', form=form)
-@app.route('Loginr')
-def Logi():
-    form = RegistrationForm()
-    return render_template('Login.htm', form=form)
+@app.route('/login')
+def login():
+    form =LoginForm()
+    return render_template('login.htm', form=form)
       
 
 

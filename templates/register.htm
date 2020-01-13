@@ -6,27 +6,27 @@
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Welcome to the Blog</legend>
             <div class="form-group">
-                {{ form.Username.label(class="form-control-label") }}
-                {{ form.Username(class="form-control form-control-lg is-invalid") }}
+                {{ form.username.label(class="form-control-label") }}
+                {{ form.username(class="form-control form-control-lg is-invalid") }}
 
                 <div class="form-group">
-                    {{ form.Email.label(class="form-control-label") }}
+                    {{ form.email.label(class="form-control-label") }}
 
-                    {{ form.Email(class="form-control form-control-lg is-invalid") }}
+                    {{ form.email(class="form-control form-control-lg is-invalid") }}
 
                     <div class="form-group">
-                        {{ form.Password.label(class="form-control-label") }}
+                        {{ form.password.label(class="form-control-label") }}
 
-                        {{ form.Password(class="form-control form-control-lg is-invalid") }}
+                        {{ form.password(class="form-control form-control-lg is-invalid") }}
 
                         <div class="form-group">
-                            {{ form.Confirm_Password.label(class="form-control-label") }}
-                            {{ form.Confirm_Password(class="form-control form-control-lg is-invalid") }}
+                            {{ form.confirm_password.label(class="form-control-label") }}
+                            {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
 
                         </div>
         </fieldset>
         <div class="form-group">
-            {{ form.Submit(class="btn btn-outline-info") }}
+            {{ form.submit(class="btn btn-outline-info") }}
         </div>
     </form>
     <div class="border-top pt-3">
