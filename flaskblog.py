@@ -28,7 +28,13 @@ def about():
     return render_template('about.htm')
 @app.route('/Register')
 def Register():
-    
+    form = RegistrationForm()
+    return render_template('register.htm', form=form)
+@app.route('Loginr')
+def Logi():
+    form = RegistrationForm()
+    return render_template('Login.htm', form=form)
+      
 
 
 if __name__ == "__main__":
