@@ -1,4 +1,4 @@
-{% extend "layouts.htm" %}
+{% extends "layouts.htm" %}
 {%block content %}
 <div class="content-section">
     <form method="POST" action="">
@@ -31,12 +31,12 @@
                 {{ form.content(class="form-control form-control-lg") }}
                 {% endif %}
             </div>
-            
+
         </fieldset>
         <div class="form-group">
             {{ form.submit(class="btn btn-outline-info") }}
         </div>
-        
+
     </form>
 </div>
-{% end block %}
+{% endblock %}

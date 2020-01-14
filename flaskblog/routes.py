@@ -105,12 +105,12 @@ def profile():
     image_file = url_for('static', filename='pics/' + current_user.image_file)
     return render_template('profile.htm', title='Profile', image_file=image_file,form=form)
      
- @app.route('/post/new', methods=['GET', 'POST'])
- @login_required
- def new_post():
+@app.route('/post/new', methods=['GET', 'POST'])
+@login_required
+def new_post():
      form = PostForm()
      if form.validate_on_submit():
          flash("Your Post has been created",'success')
          return redirect(url_for('home'))
-     return render_template('post.htm' form=form)
+     return render_template('post.htm' ,form=form)
      
