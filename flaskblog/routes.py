@@ -68,3 +68,7 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
+@app.route('/profile')
+def profile():
+    return render_template('profile.htm', title='Profile')
+     
