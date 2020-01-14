@@ -7,23 +7,11 @@ from flaskblog.forms import RegistrationForm, LoginForm,UpdateForm,PostForm
 from flask_login import login_user,current_user,logout_user,login_required
 
 
-posts = [
-    {
-        'author': ' Simon Kimani',
-        'title': 'Blog post 1',
-        'content': 'First post Content',
-        'date_posted': 'January 9, 2020'
-    },
-    {
-        'author': ' Anthony Professor',
-        'title': 'Blog post 2 ',
-        'content': 'First post Content',
-        'date_posted': 'January 9, 2020'
-    }
-]
+
 @app.route('/')
 @app.route('/home')
 def home():
+    posts = Post.query.all()
     return render_template('home.htm', posts=posts)
 
 
@@ -110,6 +98,10 @@ def profile():
 def new_post():
      form = PostForm()
      if form.validate_on_submit():
+         post=Post(title=form.title.data,content=form.content.data, author=current_user)
+         db.session.add(post)
+         db.session.commit()
+         
          flash("Your Post has been created",'success')
          return redirect(url_for('home'))
      return render_template('post.htm' ,form=form)
