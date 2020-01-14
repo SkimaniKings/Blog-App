@@ -39,7 +39,7 @@ def register():
         db.session.commit()
         
         flash(
-            f'You have successfully created an account for {form.username.data}!', 'success')
+            f'You have successfully created an account for {form.username.data}! You can now log in to your account','success')
         return redirect(url_for('home'))
     return render_template('register.htm', form=form)
 
