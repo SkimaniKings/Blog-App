@@ -71,5 +71,6 @@ def logout():
     return redirect(url_for('home'))
 @app.route('/profile')
 def profile():
-    return render_template('profile.htm', title='Profile')
+    image_file = url_for('static', filename='pics/' + current_user.image_file)
+    return render_template('profile.htm', title='Profile', image_file=image_file)
      
