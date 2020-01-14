@@ -1,4 +1,4 @@
-from flask import render_template, url_for, flash, redirect
+from flask import render_template, url_for, flash, redirect,request
 from flaskblog import app, db, bcrypt
 from flaskblog.models import User, Post
 from flaskblog.forms import RegistrationForm, LoginForm,UpdateForm
@@ -33,8 +33,8 @@ def about():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    # if current_user.is_authenticated:
-    #     return redirect(url_for('home'))
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password= bcrypt.generate_password_hash(form.password.data).decode('utf-8')
@@ -69,9 +69,20 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('home'))
-@app.route('/profile')
+@app.route('/profile', methods=['GET', 'POST'])
 def profile():
     form = UpdateForm()
+    if form.validate_on_submit():
+        current_user.username= form.username.data
+        current_user.email= form.email.data
+        db.session.commit()
+        flash("Your account has been updated!",'success')
+        return redirect(url_for('profile'))
+    elif request.method == 'GET':
+        form.username.data = current_user.username
+        form.email.data = current_user.email
+    
     image_file = url_for('static', filename='pics/' + current_user.image_file)
     return render_template('profile.htm', title='Profile', image_file=image_file,form=form)
      
+ 
