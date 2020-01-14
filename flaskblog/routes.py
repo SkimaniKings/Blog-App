@@ -32,8 +32,8 @@ def about():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if current_user.is_authenticated:
-        return redirect(url_for('home'))
+    # if current_user.is_authenticated:
+    #     return redirect(url_for('home'))
     form = RegistrationForm()
     if form.validate_on_submit():
         hashed_password= bcrypt.generate_password_hash(form.password.data).decode('utf-8')
@@ -64,5 +64,7 @@ def login():
         
         
     return render_template('login.htm', form=form)
-@app.route('logout')
+@app.route('/logout')
 def logout():
+    logout_user()
+    return redirect(url_for('home'))
