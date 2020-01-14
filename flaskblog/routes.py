@@ -1,5 +1,3 @@
-
-
 from models import User, Post
 
 posts = [
@@ -41,7 +39,3 @@ def register():
 def login():
     form = LoginForm()
     return render_template('login.htm', form=form)
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
