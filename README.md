@@ -10,6 +10,10 @@
 
 - This is the Project Screenshot of the Home page
 
+## Live-Link
+ - You can view the project on your browser using this livelink. `https://skimanikings.herokuapp.com/`
+ - ![Flask-Blog-App](flaskblog/static/pics/Screenshot.png)
+
 ## BDD
 
 1.  On loading the website the user can see the homepage that has quotes that have been posted by others.
@@ -39,6 +43,7 @@
 - After cloning navigate to the project.
 - Run `pip install` to install all the dependencies
 - Now run the project using your terminal with the command `python3.6 app.py`
+
 ## Technologies Used
 
 - PYTHON
