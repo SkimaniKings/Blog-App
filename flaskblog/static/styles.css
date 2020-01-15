@@ -1,8 +1,16 @@
-body {
-    background:lime;
+/* body {
+    background:grey;
     color: #333333;
     margin-top: 5rem;
-  }
+  } */
+  body {
+    background:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://bit.ly/2PdLJ3V) no-repeat center center/cover;
+    margin-top: 5rem;
+}
+.pitch{
+  font-family: 'Courgette', cursive;
+  color:red;
+}
   
   h1, h2, h3, h4, h5, h6 {
     color: #444444;

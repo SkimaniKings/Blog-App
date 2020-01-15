@@ -1,5 +1,15 @@
 {% extends 'layouts.htm' %}
 {% block content %}
+<div class="container-fluid">
+<div class="jumbotron bg-dark text-center">
+    <div class="pitch">
+    <h1 class="display-4 text-white">Welcome to Pitch_App</h1>
+    <p class="lead text-white">Create an account and Post a pitch I know you are thinking of right now!</p>
+    <hr class="my-4">
+    <p class="text-white text-center">A query Pitched is a turning point to someone else!</p>
+</div>
+
+  </div>
 {% for post in posts %}
 
 <article class="media content-section">
@@ -11,7 +21,10 @@
         </div>
         <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
         <p class="article-content"><a  href="{{ url_for('post', post_id=post.id) }}">{{ post.content }}</a></p>
+        <i class="fa fa-thumbs-up icon fa-2x"></i> 
+        <i class="fa fa-thumbs-down ml-5 icons fa-2x"></i>
     </div>
 </article>
 {% endfor %}
 {% endblock content %}
+</div>
