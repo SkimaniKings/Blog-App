@@ -137,4 +137,12 @@ def delete_post(post_id):
     db.session.delete(post)
     db.session.commit()
     flash('Your post has been deleted!', 'success')
-    return redirect(url_for('home'))  
+    return redirect(url_for('home'))
+# @main.route('/like/<int:id>', methods=['POST', 'GET'])
+# @login_required
+# def upvote(id):
+#     post = Post.query.get(id)
+#     new_vote = Upvote(post=post, upvote=1)
+#     vote_save.save()
+#     return redirect(url_for('main.posts'))
+  
