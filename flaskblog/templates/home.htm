@@ -15,7 +15,34 @@
             <p class="article-content">{{ post.content }}</a></p>
         
             <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons" style="color:green"><p id="click">0</p></i>
-            <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i>
+            <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i><br>
+            <button type="button" class="btn btn-outline-secondary btn-sm btn-rounded waves-effect">Comment</button>
+        
+<div class="card">
+
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Comment</strong>
+    </h5>
+    <div class="card-body px-lg-5">
+
+        <form class="text-center" style="color: #757575;" action="#!">
+
+            <p>Share your thoughts on what you feel about this post</p>
+
+            <div class="md-form mt-3">
+                <input type="text" id="materialSubscriptionFormPasswords" class="form-control">
+                <label for="materialSubscriptionFormPasswords">Username</label>
+            </div>
+
+            <div class="md-form">
+                <input type="text" id="materialSubscriptionFormEmail" class="form-control">
+                <label for="materialSubscriptionFormEmail">Comment</label>
+            </div>
+            <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Comment</button>
+        </form>
+    </div>
+</div>
+
     </article>
     {% endfor %}
     {% endblock content %}
