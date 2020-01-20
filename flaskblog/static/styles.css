@@ -4,8 +4,10 @@
     margin-top: 5rem;
   } */
   body {
-    
+    background: linear-gradient(rgba(109, 33, 60, 0.7), rgba(109, 33, 60, 0.7)),
+    url("https://1920x1080hdwallpapers.com/image/201602/abstract/4721/curve-line-spot-violet-tracery-background.jpg") no-repeat center center/cover;
     margin-top: 5rem;
+    height: 90vh;
     
 }
 nav {
