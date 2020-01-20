@@ -12,7 +12,7 @@
                 <small class="text-muted">{{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
             <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content"><a href="{{ url_for('post', post_id=post.id) }}">{{ post.content }}</a></p>
+            <p class="article-content">{{ post.content }}</a></p>
         
             <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons" style="color:green"><p id="click">0</p></i>
             <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i>
