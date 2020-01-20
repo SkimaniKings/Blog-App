@@ -8,7 +8,16 @@
     url("https://1920x1080hdwallpapers.com/image/201602/abstract/4721/curve-line-spot-violet-tracery-background.jpg") no-repeat center center/cover;
     margin-top: 5rem;
     height: 90vh;
-    
+}
+.blogging {
+  color:white;
+  font-size:2.6rem;
+  font-family: 'Permanent Marker', cursive;
+}
+.blogger { 
+  color:white;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 2rem;
 }
 nav {
   background: purple;

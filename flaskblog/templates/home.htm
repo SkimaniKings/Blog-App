@@ -1,15 +1,7 @@
 {% extends 'layouts.htm' %}
 {% block content %}
-<!-- <div class="container-fluid">
-    <div class="jumbotron bg-dark text-center">
-        <div class="pitch">
-            <h1 class="display-4 text-white">Welcome to Pitch_App</h1>
-            <p class="lead text-white">Create an account and Post a pitch I know you are thinking of right now!</p>
-            <hr class="my-4">
-            <p class="text-white text-center">A query Pitched is a turning point to someone else!</p>
-        </div>
-
-    </div> -->
+    <h1 class="blogging">Welcome to the Blog</h1>
+    <p class="blogger">Sign in and Keep us informed on the latest.</p>
     {% for post in posts %}
 
     <article class="media content-section">
@@ -21,18 +13,9 @@
             </div>
             <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
             <p class="article-content"><a href="{{ url_for('post', post_id=post.id) }}">{{ post.content }}</a></p>
-            <!-- <div class="row">
-                <div class="col-md-6">
-                    <div onClick="onClick()"><i class="fas fa-thumbs-up fa 2x" style="color:green"></i></div>
-                    <p><a id="clicks">0</a></p>
-                </div>
-                <div class="col-md-6">
-                    <div onClick="onClicks()"><i class="fas fa-thumbs-down fa 2x" style="color:red"></i></div>
-                    <p><a id="click">0</a></p>
-                </div>
-            </div> -->
-            <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons fa-2x" style="color:green"><p id="click">0</p></i>
-            <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons fa-2x" style="color:red"><p id="clicks">0</p></i>
+        
+            <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons" style="color:green"><p id="click">0</p></i>
+            <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i>
     </article>
     {% endfor %}
     {% endblock content %}
