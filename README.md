@@ -6,10 +6,10 @@
 
 - This is a python-Flask application that has been created to enable users to create and post pitches.A User can be able to create an account and their information will be saved into the databse of the website. The User is able to create a post whereby they will be able to update and delete posts at free will.
 
-## Project Screenshot
+<!-- ## Project Screenshot
 
 - This is the Project Screenshot of the Home page
-![Flask-Blog-App](flaskblog/static/pics/Screenshot.png)
+![Flask-Blog-App](flaskblog/static/pics/Screenshot.png) -->
 
 ## Live-Link
  - You can view the project on your browser using this livelink. `https://skimanikings.herokuapp.com/`
