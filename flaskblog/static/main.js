@@ -19,3 +19,7 @@ function onClicks() {
     clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
 }
+$(document).ready(function(){
+    
+
+})

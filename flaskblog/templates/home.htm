@@ -1,7 +1,9 @@
 {% extends 'layouts.htm' %}
 {% block content %}
+<header id = "simon">
     <h1 class="blogging">Welcome to the Blog</h1>
     <p class="blogger">Sign in and Keep us informed on the latest.</p>
+</header>
     {% for post in posts %}
 
     <article class="media content-section">
@@ -18,7 +20,7 @@
             <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i><br>
             <button type="button" class="btn btn-outline-secondary btn-sm btn-rounded waves-effect">Comment</button>
         
-<div class="card">
+<div class="card" id="comments">
 
     <h5 class="card-header info-color white-text text-center py-4">
         <strong>Comment</strong>
