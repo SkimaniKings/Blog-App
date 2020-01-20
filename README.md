@@ -9,10 +9,11 @@
 ## Project Screenshot
 
 - This is the Project Screenshot of the Home page
+![Flask-Blog-App](flaskblog/static/pics/Screenshot.png)
 
 ## Live-Link
  - You can view the project on your browser using this livelink. `https://skimanikings.herokuapp.com/`
- - ![Flask-Blog-App](flaskblog/static/pics/Screenshot.png)
+ - 
 
 ## BDD
 
