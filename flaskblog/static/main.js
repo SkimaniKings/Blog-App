@@ -19,7 +19,10 @@ function onClicks() {
     clicks += 1;
     document.getElementById("clicks").innerHTML = clicks;
 }
-$(document).ready(function(){
-    
 
-})
+
+// $(document).ready(function(){
+//     $("#dd").click(function(){
+//         $("#cc").show("5000")
+//     });
+// });
