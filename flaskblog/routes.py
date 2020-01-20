@@ -5,6 +5,8 @@ from flaskblog import app, db, bcrypt
 from flaskblog.models import User, Post
 from flaskblog.forms import RegistrationForm, LoginForm,UpdateForm,PostForm
 from flask_login import login_user,current_user,logout_user,login_required
+from flaskblog import request
+
 
 
 
@@ -12,7 +14,8 @@ from flask_login import login_user,current_user,logout_user,login_required
 @app.route('/home')
 def home():
     posts = Post.query.all()
-    return render_template('home.htm', posts=posts)
+    quote = request.get_quote()
+    return render_template('home.htm', posts=posts,quote=quote)
 
 
 @app.route('/about')
