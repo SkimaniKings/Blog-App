@@ -1,26 +1,33 @@
 {% extends 'layouts.htm' %}
 {% block content %}
-<header id = "simon">
+
+<header id="simon">
     <h1 class="blogging">Welcome to the Blog</h1>
     <p class="blogger">Sign in and Keep us informed on the latest.</p>
 </header>
+<div class="container">
     {% for post in posts %}
 
-    <article class="media content-section">
+    <article class="media content-section mt-5">
         <img class="article-img" src="{{url_for('static',filename= 'pics/' + post.author.image_file)}}" alt="">
         <div class="media-body">
             <div class="article-metadata">
                 <a class="mr-2" href="#">Posted by : {{ post.author.username }}</a>
                 <small class="text-muted">Posted on : {{ post.date_posted.strftime('%Y-%m-%d') }}</small>
             </div>
-            <h2><a class="article-title" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a></h2>
-            <p class="article-content">{{ post.content }}</a></p>
-        
-            <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons" style="color:green"><p id="click">0</p></i>
-            <i  onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red"><p id="clicks">0</p></i><br>
+            <h2><a class="article-title" id="heada" href="{{ url_for('post', post_id=post.id) }}">{{ post.title }}</a>
+            </h2>
+            <p class="article-content" id="para">{{ post.content }}</a></p>
+
+            <i onClick="onClick()" class="fa fa-thumbs-down ml-5 icons" style="color:green">
+                <p id="click">0</p>
+            </i>
+            <i onClick="onClicks()" class="fa fa-thumbs-down ml-5 icons" style="color:red">
+                <p id="clicks">0</p>
+            </i><br>
             <button type="button" class="btn btn-outline-secondary btn-sm btn-rounded waves-effect">Comment</button>
-        
-<div class="card" id="cc">
+
+            <!-- <div class="card" id="cc">
 
     <h5 class="card-header info-color white-text text-center py-4">
         <strong>Comment</strong>
@@ -43,7 +50,7 @@
             <button onclick="myFunction()"class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" id="dd">Comment</button>
         </form>
     </div>
-</div>
+</div> -->
 
     </article>
     {% endfor %}
