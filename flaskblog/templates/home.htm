@@ -3,11 +3,11 @@
 
 <header id="simon">
     <h1 class="blogging">Welcome to the Blog</h1>
-    <p class="blogger">Sign in and Keep us informed on the latest.</p>
+    <p class="blogger">Sign in and Keep us informed on the latest.</p><br><br>
 
+    
+    <i class="fa fa-quote-left" aria-hidden="true"><p class="mwili">{{quote.quote}}</p><i class="fa fa-quote-right" aria-hidden="true"></i>
     <p class="kichwa">{{quote.author}}</p>
-   <p class="mwili">{{quote.quote}}</p>
-
 </header>
 <div class="container">
     {% for post in posts %}
@@ -31,30 +31,6 @@
             </i><br>
             <button type="button" class="btn btn-outline-secondary btn-sm btn-rounded waves-effect">Comment</button>
 
-            <!-- <div class="card" id="cc">
-
-    <h5 class="card-header info-color white-text text-center py-4">
-        <strong>Comment</strong>
-    </h5>
-    <div class="card-body px-lg-5">
-
-        <form class="text-center" style="color: #757575;" action="#!">
-
-            <p>Share your thoughts on what you feel about this post</p>
-
-            <div class="md-form mt-3">
-                <input type="text" id="materialSubscriptionFormPasswords" class="form-control">
-                <label for="materialSubscriptionFormPasswords">Username</label>
-            </div>
-
-            <div class="md-form">
-                <input type="text" id="materialSubscriptionFormEmail" class="form-control">
-                <label for="materialSubscriptionFormEmail">Comment</label>
-            </div>
-            <button onclick="myFunction()"class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit" id="dd">Comment</button>
-        </form>
-    </div>
-</div> -->
 
     </article>
     {% endfor %}

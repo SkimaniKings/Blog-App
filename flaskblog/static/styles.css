@@ -10,6 +10,15 @@ body {
   margin-top: 5rem;
   height: 90vh;
 }
+.kichwa {
+  color:white;
+}
+.mwili {
+font-family: 'Permanent Marker', cursive;
+font-family: 'Kalam', cursive;
+color:white;
+font-size:1.5rem
+}
 #simon {
   background: linear-gradient(rgba(109, 33, 60, 0.7), rgba(109, 33, 60, 0.7)),
     url("https://1920x1080hdwallpapers.com/image/201602/abstract/4721/curve-line-spot-violet-tracery-background.jpg")
@@ -40,6 +49,13 @@ nav {
 
 nav a {
   color: #faff70;
+}
+#heada {
+  color:purple;
+}
+#para {
+font-size: 1.2rem;
+font-family: 'Courier New', Courier, monospace;
 }
 
 nav a:hover {
