@@ -4,7 +4,7 @@
 
 ## Description
 
-- This is a python-Flask application that has been created to enable users to create and post pitches.A User can be able to create an account and their information will be saved into the databse of the website. The User is able to create a post whereby they will be able to update and delete posts at free will.
+- This is a python-Flask application that has been created to enable users to create and post pitches.A User can be able to create an account and their information will be saved into the databse of the website. The User is able to create a post whereby they will be able to update and delete posts at free will.A users is also able to Upvote and Downvote blog posts according to his preferences.
 
 ## Project Screenshot
 
@@ -12,9 +12,10 @@
 ![Flask-Blog-App](flaskblog/static/pics/Screenshot.png)
 
 ## Live-Link
- - You can view the project on your browser using this livelink. `https://skimanikings.herokuapp.com/`
+ - You can view the project on your browser using this livelink. `https://simkim.herokuapp.com/`
  
 ## BDD
+
 
 1.  On loading the website the user can see the homepage that has quotes that have been posted by others.
 2.  The User needs to Create an account to be able to post anything.
@@ -35,6 +36,10 @@
 6. User can delete Post
    - Input:User clicks on the quote that he has created.
    - Output: The delete button appears that allows one to delete posts created.
+7. Random quotes are displayed on the home page on each reload or refreshing of the website.
+8. A user has the ability to upvote and downvote a blog.
+    - Press on the green Thumps up updates the vote count.
+    - Pressing on the downvote adds count to the dislikes.
 
 ## Set Up Instructions
 
